@@ -1,0 +1,4 @@
+rootProject.name = 'coordinates-web-app'
+
+include 'backend'
+include 'frontend'

@@ -1,0 +1,29 @@
+.graphContainer {
+    padding: 15px;
+    background-color: #191917;
+    border-radius: 30px;
+}
+
+.graphContainer h2 {
+    color: white;
+}
+
+.graphText {
+    cursor: default;
+}
+
+@media screen and (max-width: 705px) {
+    .graphContainer {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .graphContainer h2 {
+        margin-bottom: 15px;
+    }
+    
+    .graphContainer svg {
+        max-width: 100%;
+        height: auto;
+    }
+}

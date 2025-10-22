@@ -1,0 +1,17 @@
+.header {
+  margin: 20px;
+  padding: 30px 30px;
+  text-align: center;
+  background-color: #191917;
+  border-radius: 20px;
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
+  color: WHITE;
+}
+
+.header p {
+  margin: 5px 0;
+  color: WHITE;
+}

@@ -1,0 +1,444 @@
+.formContainer {
+  background-color: #191917;
+  border-radius: 30px;
+  padding: 45px;
+}
+
+.formContainer h2,
+.loginFormContainer h2,
+.registerFormContainer h2 {
+  color: #FFFFFF;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.radioLabel:hover {
+  background-color: #f5f5f5;
+  border-color: #007bff;
+}
+
+.textInput {
+  padding: 15px;
+  border: 3px solid #9e9d9b;
+  background-color: #191917;
+  border-radius: 16px;
+  color: white;
+  font-size: 18px;
+  cursor: text;
+}
+
+.label {
+  pointer-events: none;
+}
+
+.textInput::placeholder {
+  color: #9e9d9b;
+  transition: color 0.3s ease;
+}
+
+.textInput:hover::placeholder {
+  color: WHITE;
+  transition: color 0.4s ease;
+}
+
+.selectInput {
+  padding: 18px;
+  border: 3px solid #9e9d9b;
+  background-color: #191917;
+  border-radius: 16px;
+  color: WHITE;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.selectInput option {
+  border-radius: 20px;
+  background-color: #191917;
+  color: WHITE;
+  padding: 10px;
+}
+
+.textInput:focus {
+  outline: none;
+}
+
+.selectInput:focus {
+  outline: none;
+}
+
+.submitButton {
+  background-color: #fce000;
+  color: #000000;
+  border: none;
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: background-color 0.2s ease;
+  border-radius: 16px;
+}
+
+.submitButtonRed {
+  background-color: #E01E25;
+  color: #000000;
+  border: none;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 16px;
+}
+
+.submitButtonRed:hover {
+  background-color: rgba(224,30,37,0.7);
+}
+
+
+.submitButtonRed:focus {
+  outline: none;
+}
+
+.loginSubmitButton {
+  background-color: #fce000;
+  color: #000000;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 12px 24px;
+  flex: 1;
+  border-radius: 16px;
+}
+
+
+.submitButton:focus {
+  outline: none;
+}
+
+
+.loginSubmitButton:focus {
+  outline: none;
+}
+
+.errorMessage {
+  color: #E01E25;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.errorMessageBig {
+  color: #E01E25;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.loginFormGroup {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 63%;
+}
+
+.loginFormContainer {
+  position: relative;
+  width: 30%;
+  margin: 120px auto;
+  border-radius: 30px;
+  background-color: #191917;
+  padding: 10px;
+}
+
+
+.buttonGroup {
+  width: 63%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+@keyframes dialogOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes backdropOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdropClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dialogClose {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.registerDialog {
+  background-color: #525252;
+  border: none;
+  border-radius: 30px;
+  width: 600px;
+}
+
+
+.registerFormContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 64vh;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.registerFormGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto;
+  width: 57%;
+}
+
+.bigLabel {
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+
+.animatableDialog[open] {
+  animation: dialogOpen 0.4s ease-out;
+}
+.animatableDialog[open]::backdrop {
+  animation: backdropOpen 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.animatableDialog[closing] {
+  animation: dialogClose 0.25s ease-out forwards;
+}
+
+.animatableDialog[closing]::backdrop {
+  animation: backdropClose 0.25s ease-out forwards;
+}
+
+.animatableDialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 25, 23, 0.7);
+  pointer-events: none;
+  z-index: 5;
+}
+
+
+.registerDialog {
+  background-color: #191917;
+}
+
+.registerSuccessContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+  background-color: #191917;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.registerSuccessButtonWrapper {
+  margin-top: 20px;
+}
+.registerSuccessButtonWrapper button {
+  padding: 10px 30px;
+}
+
+
+@media screen and (max-width: 1188px) and (min-width: 706px) {
+  .loginFormContainer {
+    width: 60%;
+    margin: 80px auto;
+  }
+
+  .loginFormGroup {
+    width: 80%;
+  }
+
+  .buttonGroup {
+    width: 80%;
+  }
+
+  .registerDialog {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .registerFormGroup {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 705px) {
+  .formContainer {
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .formContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .formGroup {
+    align-items: center;
+  }
+
+  .radioGroup {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .radioButton {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .textInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .submitButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .label {
+    text-align: center;
+  }
+
+  .loginFormContainer {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px 10px;
+  }
+
+  .loginFormContainer h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .loginFormGroup {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .buttonGroup {
+    width: 90%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .loginSubmitButton {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .registerDialog {
+    width: 95%;
+    max-width: 95vw;
+    margin: 10px;
+  }
+
+  .registerFormContainer {
+    height: auto;
+    min-height: 60vh;
+    padding: 15px;
+  }
+
+  .registerFormGroup {
+    width: 90%;
+    padding: 15px 10px;
+  }
+
+  .bigLabel {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .registerSuccessContainer {
+    padding: 30px 20px;
+  }
+
+  .errorMessageBig {
+    font-size: 16px;
+    text-align: center;
+  }
+}
