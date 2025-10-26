@@ -8,12 +8,10 @@ services:
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-    ports:
-      - '5433:5432'
     volumes:
       - db_data:/var/lib/postgresql/data
   backend:
-    build: ./backend
+    build: ../coordinates-web-app/backend
     container_name: "backend"
     ports:
       - '1260:1260'
@@ -24,7 +22,7 @@ services:
       - DB_USER
       - DB_PASSWORD
   frontend:
-    build: ./frontend
+    build: ../coordinates-web-app/frontend
     container_name: "frontend"
     ports:
       - '5173:5173'
